@@ -1,0 +1,20 @@
+(define (domain shopping)
+	(:requirements :strips :typing)
+	(:types place item)
+	(:predicates
+		(at ?x - place)
+		(sells ?x - place ?y - item)
+		(have ?x - item))
+	(:action go
+		:parameters (?from - place ?to - place)
+		:precondition (at ?from)
+		:effect (and (at ?to)
+				(not (at ?from)))
+	)
+	(:action buy
+		:parameters (?x - item ?y - place)
+ 		:precondition (and (sells ?y ?x)
+					(at ?y))
+		:effect (have ?x)
+	)
+)

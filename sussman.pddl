@@ -1,0 +1,6 @@
+(define (problem sussman-problem)
+  (:domain blocksworld)
+  (:objects a b c - block)
+  (:init (ontable a)(ontable b)(on c a)
+          (clear b)(clear c)(handempty))
+  (:goal (and (on a b) (on b c))))
