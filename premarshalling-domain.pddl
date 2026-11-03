@@ -95,7 +95,8 @@
         (clear ?c)              ;; nothing is on top of container c after putting it down
         (at-tier ?c ?t2)        ;; container c is at the tier directly above the destination ?t2
         (on ?c ?to)             ;; container c is placed directly on destination ?to 
-        (not (holding ?c)))     ;; the crane is no longer holding container c
+        (not (holding ?c))      ;; the crane is no longer holding container c
+        (not (clear ?to)))      ;; the destination ?to is no longer clear after putting down the container c
   )
 
   ;; TODO 2: put-down
@@ -119,6 +120,7 @@
         (at-tier ?c ?t2)        ;; container c is at the tier directly above the destination ?t2
         (on ?c ?to)             ;; container c is placed directly on destination ?to 
         (not (well-placed ?c))  ;; container c is not well-placed after being put down
-        (not (holding ?c)))     ;; the crane is no longer holding container c
+        (not (holding ?c))      ;; the crane is no longer holding container c
+        (not (clear ?to)))
   )
 )
