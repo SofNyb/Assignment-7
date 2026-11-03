@@ -43,6 +43,17 @@
     ;; TODO 3: describe the bay.
     ;;   For every container: what it sits on, its tier and its group.
     ;;   Which places are clear?  Which containers are well-placed?
+    (on a s1)   (at-tier a t1) (group a g1)           (well-placed a)
+    ;; a is on s1, at tier t1, in group g1, and is well-placed
+    (on b a)    (at-tier b t2) (group b g3) (clear b)
+    ;; b is on a, at tier t2, in group g3, and is clear but not well-placed (because a is in group g1, which leaves before b's group g3)
+    (on c s2)   (at-tier c t1) (group c g4)           (well-placed c)
+    ;; c is on s2, at tier t1, in group g4, and is well-placed
+    (on d c)    (at-tier d t2) (group d g2) (clear d) (well-placed d)
+    ;; d is on c, at tier t2, in group g2, and is clear and well-placed (because c's group g4 leaves after d's group g2)
+    (on e s3)   (at-tier e t1) (group e g2) (clear e) (well-placed e)
+    ;; e is on s3, at tier t1, in group g2, and is clear and well-placed
+
   )
 
   ;; TODO 4: the goal
