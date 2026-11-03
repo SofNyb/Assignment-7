@@ -56,7 +56,7 @@
         ?t - tier)                  ;; tier of the place ?from
     :precondition (and
         (on ?c ?from)               ;; container c is on the place ?from
-        (clear ?from)               ;; the place above the container c is clear
+        (clear ?c)               ;; the place above the container c is clear
         (crane-free)                ;; the crane is free to lift the container c
         (at-tier ?c ?t))            ;; container c is at tier ?t (the tier of the place ?from)
     :effect (and
