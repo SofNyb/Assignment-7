@@ -50,7 +50,7 @@
     (on c s2)   (at-tier c t1) (group c g4)           (well-placed c)
     ;; c is on s2, at tier t1, in group g4, and is well-placed
     (on d c)    (at-tier d t2) (group d g2) (clear d) (well-placed d)
-    ;; d is on c, at tier t2, in group g2, and is clear and well-placed because g2 must leave before g4, but c is blocking d
+    ;; d is on c, at tier t2, in group g2, and is clear and well-placed because g2 must leave before g4, and c is not blocking d
     (on e s3)   (at-tier e t1) (group e g2) (clear e) (well-placed e)
     ;; e is on s3, at tier t1, in group g2, and is clear and well-placed
 
